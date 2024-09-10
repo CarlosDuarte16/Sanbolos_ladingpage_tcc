@@ -1,0 +1,50 @@
+.comp-baseboard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // background-color: #4F362F;
+  background-image: linear-gradient(to bottom,  #DFCFC1 ,  #DFCFC1, #4F362F 10%  );
+  height: 60VH;
+  .logo-baseboard{
+    width: auto;
+    height: 7em;
+    margin-top: 35px;
+    
+  }
+
+  .whats{
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+  }
+  .insta{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    margin-left: -2%;
+
+  }
+  .local{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    margin-left: -1%;    
+  }
+  .email{
+    display: flex;
+    gap: 10px;   
+    margin-top: 15px; 
+    margin-bottom: 50px;
+  }
+  .link{
+    text-decoration: none;
+    color: #fff;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1em;
+    margin-bottom: 15px;
+  }
+  img{
+    width: auto;
+    height: 1.5em;
+  }
+}
