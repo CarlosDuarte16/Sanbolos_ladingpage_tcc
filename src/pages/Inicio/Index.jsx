@@ -30,7 +30,7 @@ export default function Inicio() {
       setSlide((Slide1) =>
         Slide1 === bolos.length - 1 ? 0 : Slide1 + 1
       );
-    }, 3000);
+    }, 10000);
 
     setIntervalo(intervalo_tempo);
 
@@ -53,11 +53,11 @@ export default function Inicio() {
         <div className="card-information">
           <h2>Fale com o nosso chat virtual</h2>
           <h4>Nome Completo:</h4>
-          <input type="text" />
+          <input type="text" placeholder='Digite seu nome' />
           <h4>E-mail:</h4>
-          <input type="text" />
+          <input type="text" placeholder='Digite seu e-mail' />
           <h4>Celular:</h4>
-          <input type="text" />
+          <input type="text" placeholder='(00)00000-0000 ' />
           <button>Cadastre-se agora</button>
           <p>Ao continuar, você concorda em receber comunicações da <br /> SanBolos. Confira nossa <Link>Declaração de Privacidade</Link></p>
         </div>

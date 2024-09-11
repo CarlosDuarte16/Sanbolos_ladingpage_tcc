@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #fff, #DFCFC1, #fff);
+}
+
+.pagina-catálogo{
+  display: flex;
+  flex-direction: column;
+  .page-center{
+    input{
+      display: flex;
+      padding: 9px;
+      width: 30%;
+      align-items: start;
+      justify-content: center;
+      margin-top: 50px;
+      border: 2px solid #B05044;
+      border-radius: 20px;
+      font-size: 1em;
+      outline: none;
+      color: #664840;
+    }
+    .page-title{
+      display: flex;
+      color: #B05044;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+    }
+  }
+
+}
