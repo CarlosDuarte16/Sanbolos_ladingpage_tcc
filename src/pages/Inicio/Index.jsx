@@ -99,7 +99,7 @@ export default function Inicio() {
             onClick={Slide2}
           />
         </div>
-        <Link className='button-cardapio'>
+        <Link to= '/Catálogo'className='button-cardapio'>
             <h3>Clique aqui para conhecer o <br /> Cardápio Completo</h3>
         </Link>
       </div>
