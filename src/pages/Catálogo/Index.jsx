@@ -6,6 +6,10 @@ import { useEffect, useState } from 'react';
 
 
 export default function Catálogo() {
+  const[product, setProduct] = useState({
+    
+  });
+
 
   return (
     <div className="pagina-catálogo">
@@ -13,6 +17,11 @@ export default function Catálogo() {
       <div className="page-center"> 
         <input type="text" placeholder='  O que procura?' />  
         <h2 className='page-title'>Cardápio</h2>
+        {/* <div className="cards-products">
+          {product.map((products) => (
+            
+          ))}
+        </div> */}
       </div>
       <Baseboard />
     </div>

@@ -4,30 +4,33 @@
 
 body {
   background-image: linear-gradient(to bottom, #fff, #DFCFC1, #fff);
+  background-image: linear-gradient(to top, #DFCFC1, #fff, #FFF);
 }
 
-.pagina-catálogo{
+.pagina-catálogo {
   display: flex;
   flex-direction: column;
-  .page-center{
-    input{
-      display: flex;
+
+  .page-center {
+    margin-bottom: 150px;
+    input {
       padding: 9px;
       width: 30%;
-      align-items: start;
-      justify-content: center;
       margin-top: 50px;
+      margin-left: 62%;
       border: 2px solid #B05044;
       border-radius: 20px;
       font-size: 1em;
       outline: none;
       color: #664840;
     }
-    .page-title{
-      display: flex;
+
+    .page-title {
       color: #B05044;
       font-family: 'Poppins', sans-serif;
-      text-align: center;
+      margin-left: 45%;
+      margin-top: 80px;
+      font-size: 2em;
     }
   }
 
