@@ -2,19 +2,16 @@ import './Index.scss';
 import { Link } from 'react-router-dom';
 import Head from '../../components/header/Index';
 import Baseboard from '../../components/baseboard/Index';
-import {useState} from 'react';
+import { useState } from 'react';
 
-export default function Catálogo() {
+export default function Produto() {
 
   return (
-    <div className="pagina-catálogo">
+    <div className="pagina-produto">
       <Head />
       <div className="page-center">
-        <input type="text" placeholder='  O que procura?' />
-        <h2 className='page-title'>Cardápio</h2>
-    </div>
+      </div>
       <Baseboard />
     </div>
-
   )
 } 
