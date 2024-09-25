@@ -5,10 +5,8 @@ import Line from '../../components/Line/Index';
 import Baseboard from '../../components/baseboard/Index';
 import { useEffect, useState } from 'react';
 
-
 export default function Inicio() {
   const [slide, setSlide] = useState(0);
-  const [Intervalo, setIntervalo] = useState(null);
 
   const bolos = [
     {
@@ -31,11 +29,9 @@ export default function Inicio() {
         Slide1 === bolos.length - 1 ? 0 : Slide1 + 1
       );
     }, 10000);
-
-    setIntervalo(intervalo_tempo);
-
-    return () => clearInterval(intervalo_tempo)
+    return () => clearInterval(intervalo_tempo);
   }, [bolos.length]);
+  
 
   function Slide1() {
     setSlide(slide === 0 ? bolos.length - 1 : slide - 1);
@@ -50,7 +46,7 @@ export default function Inicio() {
       <Head />
       <div className="banner-card">
 
-        <div className="card-information">
+        <div className="card-information" id='faixa-inicio'>
           <h2>Fale com o nosso chat virtual</h2>
           <h4>Nome Completo:</h4>
           <input type="text" placeholder='Digite seu nome' />
@@ -77,7 +73,7 @@ export default function Inicio() {
         </div>
       </div>
       <Line />
-      <div className="faixa_cardapio">
+      <div className="faixa_cardapio" id='faixa-cardapio-slide'>
         <h2>Cardápio</h2>
         <p>Conheça nosso cardápio completo e solicite seu orçamento.</p>
 
@@ -99,12 +95,13 @@ export default function Inicio() {
             onClick={Slide2}
           />
         </div>
-        <Link to= '/Catálogo'className='button-cardapio'>
-            <h3>Clique aqui para conhecer o <br /> Cardápio Completo</h3>
+        <Link to='/Catálogo' className='button-cardapio'>
+          <h3>Clique aqui para conhecer o <br /> Cardápio Completo</h3>
         </Link>
       </div>
-
-      <Baseboard />
+      <div className="rodape" id='faixa-rodape'>
+        <Baseboard />
+      </div>
     </div>
 
   )
