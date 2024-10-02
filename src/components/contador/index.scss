@@ -1,0 +1,30 @@
+
+
+.comp-contador{
+    .cont{
+        display: flex;
+        flex-direction: flex;
+        width: 120px;
+        height: 32px;
+        background-color: #fff;
+        font-family: 'Montserrat';
+        border-radius:10px ;
+        text-align: center;
+        .butao{
+            width: 40px;
+            height: 30px;
+            background-color: #fff;
+            border:  #AE5044 1px;
+            // border-top-left-radius:12px ;
+            // border-bottom-left-radius:12px ;
+        }
+        .butao1{
+            width: 40px;
+            height: 30px;
+            background-color: #fff;
+            border:  #AE5044 1px;
+            // border-top-right-radius:12px ;
+            // border-bottom-right-radius:12px ;
+        }
+    }
+}
