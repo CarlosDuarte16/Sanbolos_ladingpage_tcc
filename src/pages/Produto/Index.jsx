@@ -1,8 +1,8 @@
 import './Index.scss';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Head from '../../components/header/Index';
 import Baseboard from '../../components/baseboard/Index';
-import { useState } from 'react';
+// import { useState } from 'react';
 
 export default function Produto() {
 
