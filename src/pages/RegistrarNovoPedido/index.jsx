@@ -1,24 +1,11 @@
+import './index.scss';
 // import { useState } from 'react';
 import Contador from '../../components/contador';
-import './index.scss';
 
 export default function NovoPedido() {
 
-    // const [valorPedido, setValorPedido] = useState(0)
-    //Nome Cliente
-    //Endereço
-    //WhatsApp
-    //Telefone
-    //contador
-    //Valor
-    //const [nomeCliente, setNomeCliente] = useState('')
-    //const [endereco, setEnderco] = useState('')
-    //const [wats, setWats] = useState(0)
-    //const [telefone, setTelefone] = useState(0)
-    //const [valor, setValor] = useState(0)
-
     return (
-        <div className=' pagina-novo-pedido'>
+        <div className='pagina-novo-pedido'>
 
                 <img src="" alt="Error" />
                 <h1>Novo pedido</h1>
@@ -57,11 +44,14 @@ export default function NovoPedido() {
 
                     <div className='input'>
                         <h3>Valor:</h3>
-                        <input type="text" />
+                        <input type="" />
                     </div>
                 </div>
             </div>
-
+            <div className='forma-de-pagamento'>
+            <h3>Forma de pagamento:</h3>
+            <input className='pagamento' type="text" />
+            </div>
             <div className='butoes'>
                 <button>Salvar</button>
                 <button>Cancelar</button>
