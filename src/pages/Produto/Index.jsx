@@ -1,8 +1,5 @@
 import './Index.scss';
-<<<<<<< HEAD
 import { useParams } from 'react-router-dom';
-import Head from '../../components/header/Index';
-import Baseboard from '../../components/baseboard/Index';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Head from '../../components/header/Index';

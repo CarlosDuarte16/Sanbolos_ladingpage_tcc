@@ -3,7 +3,7 @@ import Head from '../../components/header/Index';
 import Baseboard from '../../components/baseboard/Index';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import { Link } from 'react-router-dom';
 
 export default function Catálogo() {
   const [consulProduct, setConsulProduct] = useState([]);
