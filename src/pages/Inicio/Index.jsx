@@ -1,13 +1,14 @@
 import './Index.scss';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Head from '../../components/header/Index';
 import Line from '../../components/Line/Index';
 import Baseboard from '../../components/baseboard/Index';
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 export default function Inicio() {
   const [slide, setSlide] = useState(0);
-
+  // ----------------------------------
   const bolos = [
     {
       img: "./assets/image/bolo-caseiro.png",
@@ -31,7 +32,6 @@ export default function Inicio() {
     }, 10000);
     return () => clearInterval(intervalo_tempo);
   }, [bolos.length]);
-  
 
   function Slide1() {
     setSlide(slide === 0 ? bolos.length - 1 : slide - 1);
@@ -41,6 +41,26 @@ export default function Inicio() {
     setSlide(slide === bolos.length - 1 ? 0 : slide + 1);
   };
 
+  // ----------------------------------
+
+  const [nome, setNome] = useState('');
+  const [email, setEmail] = useState('');
+  const [endereço, setEndereço] = useState('');
+  const [telefone, setTelefone] = useState('');
+
+  async function salvarBD() {
+    const salvador = {
+      "nome": nome,
+      "email": email,
+      "endereço": endereço,
+      "telefone": telefone
+    }
+
+    const url = 'http://localhost:5001/api/inserirCliente';
+    let resp = await axios.post(url, salvador);
+    alert(`Cliente adicionada no BD. Id: ${resp.data.novoId}`)
+  }
+
   return (
     <div className="pagina-inicio">
       <Head />
@@ -49,12 +69,12 @@ export default function Inicio() {
         <div className="card-information" id='faixa-inicio'>
           <h2>Fale com o nosso chat virtual</h2>
           <h4>Nome Completo:</h4>
-          <input type="text" placeholder='Digite seu nome' />
+          <input type="text" placeholder='Digite seu nome' value={nome} onChange={e => setNome(e.target.value)} />
           <h4>E-mail:</h4>
-          <input type="text" placeholder='Digite seu e-mail' />
+          <input type="text" placeholder='Digite seu e-mail' value={email} onChange={e => setEmail(e.target.value)} />
           <h4>Celular:</h4>
-          <input type="text" placeholder='(00)00000-0000 ' />
-          <button>Cadastre-se agora</button>
+          <input type="text" placeholder='(00)00000-0000 ' value={telefone} onChange={e => setTelefone(e.target.value)} />
+          <button onClick={salvarBD}>Cadastre-se agora</button>
           <p>Ao continuar, você concorda em receber comunicações da <br /> SanBolos. Confira nossa <Link>Declaração de Privacidade</Link></p>
         </div>
       </div>

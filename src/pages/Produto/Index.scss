@@ -1,0 +1,30 @@
+* {
+  margin: 0px;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #fff, #DFCFC1, #fff);
+  background-image: linear-gradient(to top, #DFCFC1, #DFCFC1, #FFF);
+}
+
+.pagina-produto {
+  display: flex;
+  flex-direction: column;
+
+
+  .page-center {
+    input {
+      padding: 9px;
+      width: 30%;
+      margin-top: 50px;
+      margin-left: 62%;
+      border: 2px solid #B05044;
+      border-radius: 20px;
+      font-size: 1em;
+      outline: none;
+      color: #664840;
+    }
+
+  }
+
+}

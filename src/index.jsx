@@ -13,7 +13,7 @@ root.render(
     <Routes>
       <Route path='/' element={<Inicio/>}/>
       <Route path='/Catálogo' element={<Catálogo/>}/>
-      <Route path='/Produto' element={<Produto/>}/>
+      <Route path='/Produto/:id' element={<Produto/>}/>
     </Routes>
     </BrowserRouter>
   </React.StrictMode>

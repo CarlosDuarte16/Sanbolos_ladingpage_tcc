@@ -4,7 +4,7 @@
 
 body {
   background-image: linear-gradient(to bottom, #fff, #DFCFC1, #fff);
-  background-image: linear-gradient(to top, #DFCFC1, #fff, #FFF);
+  background-image: linear-gradient(to top, #DFCFC1, #DFCFC1, #FFF);
 }
 
 .pagina-catálogo {
@@ -35,55 +35,37 @@ body {
       font-size: 2em;
     }
 
-    .vitrini {
+    .cards_products {
       display: flex;
-      flex-direction: flex;
       flex-wrap: wrap;
-      padding: 10px;
-      margin-bottom: 20px;
-      margin-left: 30px;
-      margin-right: 30px;
-      align-items: center;
-      justify-content: center;
-
-
-      img {
-        width: 200px;
-        height: 200px;
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-bottom: 7px;
-        transition: 200ms;
-        border-radius: 20px;
-      }
-
-      .imagem {
+      .card{
+        outline: none;
+        border: none;  
         display: flex;
         flex-direction: column;
-        text-align: center;
         align-items: center;
-        width: 210px;
+        justify-content: center;
+        margin: 70px 8%;
+        text-decoration: none;
+        img{
+          border: #664840 solid 3px;
+          border-radius: 15px;
+          box-shadow: 0px 0px 20px #664840;
+        }
+        h3{
+          font-size: 1.4em;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          color: #B05044;
+          font-weight: 500;
+        }
+        p{
+          color: #000;
+          font-size: 1.1em;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-        .preco {
-          font-family: 'Poppins', sans-serif;
-          margin-top: 5px;
-          font-size: 15px;
         }
       }
+
     }
-
-    .page-title {
-      display: flex;
-      color: #B05044;
-      font-family: 'Poppins', sans-serif;
-      text-align: center;
-      font-size: 13px;
-    }
-
-  }
-
-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 15px #ffffff;
   }
 }
