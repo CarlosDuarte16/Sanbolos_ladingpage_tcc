@@ -1,0 +1,34 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+.pagina-novo-pedido{
+        height: 56em;
+        background-color: #F5EDE5;
+
+        .informacoes-pedido{
+
+            .inputs{
+
+                .input{
+                    input{
+                        outline-color:#b17168 ;
+                        border-color: #AE5044;
+                        border-radius: 3px;
+                    }
+                }
+            }
+        }
+        .forma-de-pagamento{
+            .pagamento{
+                height: 21px;
+                width: 130px;
+                outline-color:#b17168 ;
+                border-color: #AE5044;
+                border-radius: 3px;
+            }
+        }
+        h3{
+            font-family: 'Montserrat';
+        }
+    }
