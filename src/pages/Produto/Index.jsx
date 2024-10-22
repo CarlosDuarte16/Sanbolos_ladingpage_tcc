@@ -49,7 +49,7 @@ export default function Produto() {
             <p>{descrição}</p>
           </div>
           <div className="direct-whatsapp">
-            <img src="/assets/icons/whatsapp.png" alt="WhatsApp" />
+            <img src="/assets/image/whatsapp.png" alt="WhatsApp" />
             <h3>Fale conosco no WhatsApp</h3>
           </div>
         </div>
