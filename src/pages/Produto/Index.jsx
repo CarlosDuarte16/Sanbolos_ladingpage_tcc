@@ -7,9 +7,7 @@ import Baseboard from '../../components/baseboard/Index';
 
 export default function Produto() {
   const { id } = useParams();
-  const [nome, setNome] = useState('');
-  const [descrição, setDescrição] = useState('');
-  const [valor, setValor] = useState('');
+  const [produto, setProduto] = useState(null);
   const [loading, setLoading] = useState(true);
 
   async function carregarProduto() {
@@ -17,10 +15,7 @@ export default function Produto() {
       const url = `http://localhost:5001/api/consultarProduto/${id}`;
       let resp = await axios.get(url);
 
-      const produto = resp.data;
-      setNome(produto.nome);
-      setDescrição(produto.descrição);
-      setValor(produto.preço);
+      setProduto(resp.data);
     } catch (error) {
       console.error('Erro ao carregar o produto', error);
     } finally {
@@ -36,17 +31,22 @@ export default function Produto() {
     return <p>Carregando...</p>;
   }
 
+  // Verifique se produto é nulo ou indefinido
+  if (!produto) {
+    return <p>Produto não encontrado</p>;
+  }
+
   return (
     <div className="pagina-produto">
       <Head />
       <div className="page-center">
         <input type="text" placeholder='  O que procura?' />
         <div className='img-text'>
-          <img src="/assets/image/bolo.jpeg" alt={nome} />
+          <img src={produto.imagem || "/assets/image/bolo.jpeg"} alt={produto.nome} />
           <div className="description-product">
-            <h1>{nome}</h1>
-            <h3>R${valor}</h3>
-            <p>{descrição}</p>
+            <h1>{produto.nome}</h1>
+            <h3>R${produto.valor}</h3>
+            <p>{produto.descrição}</p>
           </div>
           <div className="direct-whatsapp">
             <img src="/assets/icons/whatsapp.png" alt="WhatsApp" />
