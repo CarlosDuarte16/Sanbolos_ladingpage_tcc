@@ -2,63 +2,51 @@
   margin: 0;
 }
 
-body {
-  background-image: linear-gradient(to bottom, #fff, #DFCFC1, #fff);
-  background-image: linear-gradient(to top, #DFCFC1, #DFCFC1, #FFF);
-}
 
 .pagina-catálogo {
   display: flex;
+  
   flex-direction: column;
-
   .page-center {
     margin-bottom: 150px;
-
-    input {
-      padding: 9px;
-      width: 30%;
-      margin-top: 50px;
-      margin-left: 62%;
-      border: 2px solid #B05044;
-      border-radius: 20px;
-      font-size: 1em;
-      outline: none;
-      color: #664840;
-    }
-
+    width: auto;
 
     .page-title {
       color: #B05044;
       font-family: 'Poppins', sans-serif;
       margin-left: 45%;
-      margin-top: 80px;
+      margin-top: 100px;
       font-size: 2em;
     }
 
     .cards_products {
       display: flex;
       flex-wrap: wrap;
-      .card{
+
+      .card {
         outline: none;
-        border: none;  
+        border: none;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin: 70px 8%;
         text-decoration: none;
-        img{
+
+        img {
           border: #664840 solid 3px;
           border-radius: 15px;
           box-shadow: 0px 0px 20px #664840;
         }
-        h3{
+
+        h3 {
           font-size: 1.4em;
           font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
           color: #B05044;
           font-weight: 500;
         }
-        p{
+
+        p {
           color: #000;
           font-size: 1.1em;
           font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -66,6 +54,24 @@ body {
         }
       }
 
+    }
+  }
+  @media(max-width:768px){
+    .page-center{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      .page-title{
+        display: flex;
+        justify-content: center;
+        margin-left: 0%;
+      }
+
+      .cards_products{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
     }
   }
 }

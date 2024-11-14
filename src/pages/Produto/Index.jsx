@@ -12,7 +12,7 @@ export default function Produto() {
 
   async function carregarProduto() {
     try {
-      const url = `http://localhost:5001/api/consultarProduto/${id}`;
+      const url = `http://4.172.207.208:5012/consultarProdutos/${id}`;
       let resp = await axios.get(url);
 
       setProduto(resp.data);
@@ -31,7 +31,6 @@ export default function Produto() {
     return <p>Carregando...</p>;
   }
 
-  // Verifique se produto é nulo ou indefinido
   if (!produto) {
     return <p>Produto não encontrado</p>;
   }

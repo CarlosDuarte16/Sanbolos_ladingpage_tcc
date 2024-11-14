@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 
 export default function Catálogo() {
   const [consulProduct, setConsulProduct] = useState([]);
-
+ 
   async function buscar() {
-    const url = 'http://localhost:5001/api/consultarProduto';
+    const url = 'http://4.172.207.208:5012/consultarProduto';
     try {
       let resp = await axios.get(url);
       setConsulProduct(resp.data);
@@ -26,7 +26,6 @@ export default function Catálogo() {
     <div className="pagina-catálogo">
       <Head />
       <div className="page-center">
-        <input type="text" placeholder='  O que procura?' />
         <h2 className='page-title'>Cardápio</h2>
         <div className="cards_products">
           {consulProduct.map(item => (

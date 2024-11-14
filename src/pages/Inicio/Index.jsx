@@ -4,10 +4,13 @@ import Head from '../../components/header/Index';
 import Line from '../../components/Line/Index';
 import Baseboard from '../../components/baseboard/Index';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios from 'axios'; 
+
+
 
 export default function Inicio() {
   const [slide, setSlide] = useState(0);
+  const navigate = useNavigate()
   // ----------------------------------
   const bolos = [
     {
@@ -41,6 +44,9 @@ export default function Inicio() {
     setSlide(slide === bolos.length - 1 ? 0 : slide + 1);
   };
 
+  function Catálogo() {
+    navigate('/Catálogo')
+  }
   // ----------------------------------
 
   const [nome, setNome] = useState('');
@@ -56,7 +62,7 @@ export default function Inicio() {
       "telefone": telefone
     }
 
-    const url = 'http://localhost:5001/api/inserirCliente';
+    const url = 'http://4.172.207.208:5012/inserirCliente';
     let resp = await axios.post(url, salvador);
     alert(`Cliente adicionada no BD. Id: ${resp.data.novoId}`)
   }
@@ -65,7 +71,6 @@ export default function Inicio() {
     <div className="pagina-inicio">
       <Head />
       <div className="banner-card">
-
         <div className="card-information" id='faixa-inicio'>
           <h2>Fale com o nosso chat virtual</h2>
           <h4>Nome Completo:</h4>
@@ -85,9 +90,9 @@ export default function Inicio() {
           <h2>Sobre nós</h2>
           <div className="text_sobre-nos">
             <p>
-              Somos uma confeitaria artesanal fundada e gerida com muito amor e <br /> dedicação por Dream Cake. Nossa missão é adoçar a vida das pessoas com <br /> bolos, tortas e doces que não apenas encantam o paladar, mas também o <br /> coração.
+              Somos uma confeitaria artesanal fundada e gerida com muito amor e dedicação por Dream Cake. Nossa missão é adoçar a vida das pessoas com bolos, tortas e doces que não apenas encantam o paladar, mas também o coração.
             </p>
-            <p>Tudo começou com uma paixão pela confeitaria, que foi crescendo junto com <br /> o     desejo de criar delícias que pudessem ser compartilhadas em momentos <br /> especiais. Com anos de experiência e um talento natural para a arte da <br />confeitaria, SanBolos decidiu transformar sua paixão em um <br />negócio, trazendo para a sua mesa receitas únicas e tradicionais, preparadas <br /> com os melhores ingredientes e um toque especial de carinho.
+            <p>Tudo começou com uma paixão pela confeitaria, que foi crescendo junto com o desejo de criar delícias que pudessem ser compartilhadas em momentos especiais. Com anos de experiência e um talento natural para a arte da confeitaria, SanBolos decidiu transformar sua paixão em um negócio, trazendo para a sua mesa receitas únicas e tradicionais, preparadas com os melhores ingredientes e um toque especial de carinho.
             </p>
           </div>
         </div>
@@ -115,9 +120,7 @@ export default function Inicio() {
             onClick={Slide2}
           />
         </div>
-        <Link to='/Catálogo' className='button-cardapio'>
-          <h3>Clique aqui para conhecer o <br /> Cardápio Completo</h3>
-        </Link>
+        <button className='button-cardapio' onClick={Catálogo}>Clique aqui para conhecer o <br /> Cardápio Completo</button>
       </div>
       <div className="rodape" id='faixa-rodape'>
         <Baseboard />
